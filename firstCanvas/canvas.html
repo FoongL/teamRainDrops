@@ -10,17 +10,28 @@
 </head>
 
 <body>
-    <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <canvas id="canvas-real" class="canvas" width='1280px' height='720px'></canvas>
-    <canvas id="canvas-draft" class="canvas" width='1280px' height='720px'></canvas>
+
+
+    <div class='container-fluid' id='canvasContainer'>
+        <canvas id="canvas-real" class="canvas" width='1000px' height='650px'></canvas>
+        <canvas id="canvas-draft" class="canvas" width='1000px' height='650px'></canvas>
+    </div>
+
+    <div id='functions'>
+        <button id ='drawRect'>Draw Rectangle</button>
+        <button id ='drawLine'>Draw Line</button>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type='text/javascript' src="canvasCommon.js"></script>
+    <script type='text/javascript' src="buttons.js"></script>
     <script type='text/javascript' src="drawingRec.js"></script>
     <script type='text/javascript' src="drawLine.js"></script>
     <script type='text/javascript'>
-
         currentFunction = new DrawingRectangle(contextReal, contextDraft);
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
 </html>
