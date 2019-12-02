@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas First Draft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <canvas id="canvas-real" class="canvas" width='1280px' height='720px'></canvas>
+    <canvas id="canvas-draft" class="canvas" width='1280px' height='720px'></canvas>
+    <script type='text/javascript' src="canvasCommon.js"></script>
+    <script type='text/javascript' src="drawingRec.js"></script>
+    <script type='text/javascript' src="drawLine.js"></script>
+    <script type='text/javascript'>
+
+        currentFunction = new DrawingRectangle(contextReal, contextDraft);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
