@@ -210,3 +210,17 @@ input {
     padding-top: 660px;
 }
 
+/* David's Code */
+.button {
+    z-index: 3;
+    margin-left: 1000px;
+}
+
+.imagebox {
+    display: none;
+}
+
+.iconsize {
+    width: 25px;
+    height: 25px;
+}
