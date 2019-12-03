@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas First Draft</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+
+    <div class='container-fluid' id='canvasContainer'>
+        <canvas id="canvas-real" class="canvas" width='1000px' height='650px'></canvas>
+        <canvas id="canvas-draft" class="canvas" width='1000px' height='650px'></canvas>
+    </div>
+    <div id=selectionPanel>
+        <div id='functionPanels'>
+            <button class="button" id='drawLine'>Pencil</button>
+            <button class="button" id='graffiti'>Graffiti</button>
+            <button class="button" id='marker'>Marker</button>
+            <button class="button" id='straight-line'>Straight Line</button>
+            <button class="button" id='curve-line'>Curved Line</button>
+            <button class="button" id="drawingRect">Rekt</button>
+            <button class="button" id="drawingTriangle">TriggerDnometry</button>
+            <button class="button" id="drawingCircle">Balls</button>
+            <button class="button" id="drawingHeart">Love</button>
+            <button class="button" id="drawingPolygon">Polygon</button>
+            <button class="button" id="drawingImages">Images</button>
+            <button class="button" id="drawingEraser">Eraser</button>
+            <button class="button" id="clearbutton">Clear</button>
+        </div>
+        <div class="colorpicker" id="colorpicker">
+            <span key="picker" class="picker" id="picker">
+                <h3 class="colorDescription">Color</h3>
+                <div class="swatch" id="color">
+                </div>
+                <h6 class="colorDescription">Hue</h6>
+                <div class="slider-container">
+                    <input name="hue" type="range" min="1" max="300" value="130" class="slider hue" />
+                </div>
+                <h6 class="colorDescription">Saturation</h6>
+                <div class="slider-container">
+                    <input name="sat" id="sat" type="range" min="1" max="100" value="60" class="slider sat" />
+                </div>
+                <h6 class="colorDescription">Light</h6>
+                <div class="slider-container">
+                    <input name="light" type="range" min="1" max="100" value="55" class="slider light" />
+                </div>
+                <h6 class="colorDescription">Opacity</h6>
+                <div class="slider-container">
+                    <input name="opacity" id="opa" type="range" min="1" max="100" value="100" class="slider opacity" />
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <div class='imagebox'>
+        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        </div>
+        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
+        </div>
+        <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
+        </div>
+        <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
+        </div>
+        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        </div>
+        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
+        </div>
+        <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
+        </div>
+        <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
+        </div>
+        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        </div>
+        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
+        </div>
+        <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
+        </div>
+        <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
+        </div>
+        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        </div>
+        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
+        </div>
+        <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
+        </div>
+        <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type='text/javascript' src="./assets/javascript/canvasCommon.js"></script>
+    <script type='text/javascript' src="./assets/javascript/init.js"></script>
+    <script type='text/javascript' src="./assets/javascript/draw-pen-F.js"></script>
+    <script type='text/javascript' src="./assets/javascript/colorPicker-F.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-line.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-rectangle.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-triangle.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-circle.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-heart.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-polygon.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-images.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-eraser.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-straight-S.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-curve.js"></script>
+    <script type='text/javascript'>
+        currentFunction = new PencilLine(contextReal, lineColor);
+    </script>
+</body>
+
+</html>
