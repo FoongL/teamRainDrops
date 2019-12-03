@@ -31,6 +31,8 @@
             <button class="button" id="drawingImages">Images</button>
             <button class="button" id="drawingEraser">Eraser</button>
             <button class="button" id="clearCanvas">Clear</button>
+            <button class="button" id="undo-button">Undo</button>
+            <button class="button" id="redo-button">Redo</button>
         </div>
         <div class="colorpicker" id="colorpicker">
             <span key="picker" class="picker" id="picker">
@@ -112,6 +114,7 @@
     <script type='text/javascript' src="assets/javascript/clear-canvas.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-straight-S.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-curve.js"></script>
+    <script type='text/javascript' src="assets/javascript/undoRedo-F.js"></script>
     <script type='text/javascript'>
         currentFunction = new PencilLine(contextReal, lineColor);
     </script>

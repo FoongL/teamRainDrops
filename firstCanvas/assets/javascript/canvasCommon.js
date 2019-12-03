@@ -7,6 +7,8 @@ let currentFunction;
 let lineColor = 'rgba(0,0,0,1)';
 let fillColor = 'rgba(0,0,0,1)';
 let dragging = false;
+let undoDataStack = [];
+
 
 
 $('#canvas-draft').mousedown(function(e){

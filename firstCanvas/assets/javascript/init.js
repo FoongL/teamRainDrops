@@ -56,7 +56,7 @@ $('#drawingImages').on('click', function(){
 })
 
 $('#clearCanvas').on('click', function(){
-  currentFunction = new clearCanvas(contextReal, contextDraft)
+  new clearCanvas(contextReal, contextDraft)
 })
 
 // Suruchi's Clicks
