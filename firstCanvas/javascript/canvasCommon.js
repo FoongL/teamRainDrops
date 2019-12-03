@@ -4,7 +4,10 @@ let contextReal = canvasReal.getContext('2d');
 let canvasDraft = document.getElementById('canvas-draft');
 let contextDraft = canvasDraft.getContext('2d');
 let currentFunction;
+let lineColor = 'rgba(0,0,0,1)';
+let fillColor = 'rgba(0,0,0,1)';
 let dragging = false;
+
 
 $('#canvas-draft').mousedown(function(e){
     let mouseX = e.offsetX;

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas First Draft</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <div class='container-fluid' id='canvasContainer'>
+        <canvas id="canvas-real" class="canvas" width='1000px' height='650px'></canvas>
+        <canvas id="canvas-draft" class="canvas" width='1000px' height='650px'></canvas>
+    </div>
+
+    <div id='functions'></div>
+        <button id='drawLine'>Pencil</button>
+        <button id='graffiti'>Graffiti</button>
+        <button id='marker'>Marker</button>
+        <!-- <button id='liam'>Liam</button> -->
+    </div>
+
+    <div class="colorpicker" id="colorpicker">
+            <span key="picker" class="picker" id="picker">
+               <h3 class="colorDescription">Color</h3>
+               <div class="swatch" id="color">
+               </div>
+               <h6 class="colorDescription">Hue</h6>
+               <div class="slider-container">
+                  <input name="hue" type="range" min="1" max="300" value="130" class="slider hue" />
+               </div>
+               <h6 class="colorDescription">Saturation</h6>
+               <div class="slider-container">
+                  <input name="sat" id="sat" type="range" min="1" max="100" value="60" class="slider sat" />
+               </div>
+               <h6 class="colorDescription">Light</h6>
+               <div class="slider-container">
+                  <input name="light" type="range" min="1" max="100" value="55" class="slider light" />
+               </div>
+               <h6 class="colorDescription">Opacity</h6>
+               <div class="slider-container">
+                  <input name="light" type="range" min="1%" max="100%" value="55%" class="slider opacity" />
+               </div>
+         </div>
+         </span>
+         </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type='text/javascript' src="./javascript/canvasCommon.js"></script>
+    <script type='text/javascript' src="./javascript/init.js"></script>
+    <script type='text/javascript' src="./javascript/draw-pen-F.js"></script>
+    <script type='text/javascript' src="./javascript/colorPicker-F.js"></script>
+    <script type='text/javascript'>
+        currentFunction = new PencilLine(contextReal, lineColor);
+    </script>
+</body>
+
+</html>
