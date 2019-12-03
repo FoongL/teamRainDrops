@@ -22,10 +22,6 @@ $('#drawRect').on('click', function() {
 
 
 // David's Clicks
-$('#drawingLine').on('click', function(){
-  currentFunction = new DrawingLine(contextReal,contextDraft)
-})
-
 $('#drawingRect').on('click', function(){
   currentFunction = new DrawingRectangle(contextReal,contextDraft)
 })
@@ -56,7 +52,7 @@ $('#drawingImages').on('click', function(){
 })
 
 $('#clearCanvas').on('click', function(){
-  currentFunction = new clearCanvas(contextReal, contextDraft)
+  new clearCanvas(contextReal, contextDraft)
 })
 
 // Suruchi's Clicks
@@ -67,3 +63,5 @@ $('#straight-line').on('click',function(){
 $('#curve-line').on('click',function(){
   currentFunction = new DrawingCurve(contextDraft,contextReal)
 })
+
+

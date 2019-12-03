@@ -17,8 +17,9 @@ class DrawingTriangle extends PaintFunction{
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX,this.origY);
         this.contextDraft.lineTo(coord[0],coord[1]);
-        this.contextDraft.lineTo((coord[0]+150),(coord[1]-0));
+        this.contextDraft.lineTo(this.origX+(this.origX-coord[0]),(coord[1]));
         this.contextDraft.fill();
+        this.contextDraft.closePath()
         this.contextDraft.stroke()
     }
 
@@ -28,7 +29,7 @@ class DrawingTriangle extends PaintFunction{
         this.contextReal.beginPath();
         this.contextReal.moveTo(this.origX,this.origY);
         this.contextReal.lineTo(coord[0],coord[1]);
-        this.contextReal.lineTo((coord[0]+150),(coord[1]-0));
+        this.contextReal.lineTo(this.origX+(this.origX-coord[0]),(coord[1]));
         this.contextReal.fill();
         this.contextReal.closePath()
         this.contextReal.stroke()
