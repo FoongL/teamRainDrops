@@ -10,6 +10,10 @@ let dragging = false;
 let undoDataStack = [];
 
 
+$( document ).ready(function() {
+    contextReal.fillStyle = 'rgba(255, 255, 255,1)';  
+    contextReal.fillRect(0,0,canvasReal.width,canvasReal.height);
+});
 
 $('#canvas-draft').mousedown(function(e){
     let mouseX = e.offsetX;
@@ -32,8 +36,8 @@ $('#canvas-draft').mouseup(function(e){
     let mouseX = e.offsetX;
     let mouseY = e.offsetY;
     currentFunction.onMouseUp([mouseX,mouseY],e);
+    beforeDraw()
 });
-
 $('#canvas-draft').mouseleave(function(e){
     dragging = false;
     let mouseX = e.offsetX;

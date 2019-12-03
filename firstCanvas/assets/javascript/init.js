@@ -1,3 +1,4 @@
+
 //------------------Pen Function Buttons
 $('#drawLine').on('click', function() {
   currentFunction = new PencilLine(contextReal, lineColor);

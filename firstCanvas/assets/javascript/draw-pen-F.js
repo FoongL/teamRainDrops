@@ -150,10 +150,13 @@ class Marker extends PaintFunction {
     this.context.stroke();
 
     this.lastPoint = { x: coord[0], y: coord[1] };
+    this.context.globalAlpha = 1
   }
 
   onMouseMove() {}
-  onMouseUp() {}
+  onMouseUp() {
+    this.context.globalAlpha = 1
+  }
   onMouseLeave() {}
   onMouseEnter() {}
 
