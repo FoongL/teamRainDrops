@@ -13,7 +13,7 @@ $('#graffiti').on('click', function() {
     currentFunction = new Liam(contextReal, liam);
   });
 
-//------------------COlors
+//------------------Colors
 
 // Other buttons
 $('#drawRect').on('click', function() {
