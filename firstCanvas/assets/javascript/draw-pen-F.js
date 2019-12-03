@@ -2,11 +2,11 @@ class PencilLine extends PaintFunction {
   constructor(contextReal, lineColor) {
     super();
     this.context = contextReal;
-    this.lineColor = lineColor;
+    this.lineColor = getHSL();
   }
 
   onMouseDown(coord, event) {
-    this.context.strokeStyle = this.lineColor;
+    this.context.strokeStyle = getHSL();
     this.context.lineJoin = 'round';
     this.context.lineCap = 'round';
     this.context.lineWidth = 2;
@@ -39,7 +39,7 @@ class Graffiti extends PaintFunction {
   }
 
   onMouseDown(coord, event) {
-    this.context.strokeStyle = '#df4b26';
+    this.context.strokeStyle = getHSL();
     this.lineJoin = 'round';
     this.lineCap = 'round';
     this.context.beginPath();
@@ -67,13 +67,22 @@ class Graffiti extends PaintFunction {
 
       var radgrad = this.context.createRadialGradient(x, y, 10, x, y, 20);
 
-      radgrad.addColorStop(0, '#000');
-      radgrad.addColorStop(0.5, 'rgba(0,0,0,0.5)');
-      radgrad.addColorStop(1, 'rgba(0,0,0,0)');
+      radgrad.addColorStop(0, getHSL());
+      // console.log(getHSL().split(','))
+      let hsla = getHSL().split(',');
+      let h = hsla[0].split('(')[1];
+      let s = hsla[1];
+      let l = hsla[2];
+      let a = hsla[3];
+      a = a.substring(0,a.length -1)
+      let aOne = a*0.5
+      let aTwo = a*0.1
+      radgrad.addColorStop(0.5, `hsla(${h}, ${s}, ${l}, 0.5`);
+      radgrad.addColorStop(1, `hsla(${h}, ${s}, ${l}, 0)`);
 
       this.context.fillStyle = radgrad;
       this.context.fillRect(x - 20, y - 20, 40, 40);
-    }
+    } 
     this.lastPoint = currentPoint;
   }
   onMouseMove() {}
@@ -97,9 +106,11 @@ class Marker extends PaintFunction {
     this.context.lineWidth = 5;
     this.context.lineJoin = 'round';
     this.context.lineCrap = 'round';
+    this.lineColor = getHSL();
   }
 
   onMouseDown(coord, event) {
+    this.context.strokeStyle = getHSL();
     this.lineWidth = 19;
     this.lineCap = 'round';
     this.lineJoin = 'round';
@@ -170,15 +181,15 @@ class Liam extends PaintFunction {
   onMouseDown(coord, event) {
     let liamImage = new Image();
     liamImage.src = this.liamSource;
-    console.log(liamImage)
+    console.log(liamImage);
     function getPattern() {
-        return this.context.createPattern(liamImage, 'repeat');
-      }
+      return this.context.createPattern(liamImage, 'repeat');
+    }
 
-     liamImage.onload =function() {
-      this.context.strokeStyle = getPattern()
+    liamImage.onload = function() {
+      this.context.strokeStyle = getPattern();
     };
-    
+
     this.context.lineJoin = 'round';
     this.context.lineCap = 'round';
     this.context.lineWidth = 25;

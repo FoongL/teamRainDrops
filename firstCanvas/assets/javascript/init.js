@@ -13,7 +13,7 @@ $('#graffiti').on('click', function() {
     currentFunction = new Liam(contextReal, liam);
   });
 
-//------------------COlors
+//------------------Colors
 
 // Other buttons
 $('#drawRect').on('click', function() {
@@ -59,4 +59,11 @@ $('#clearCanvas').on('click', function(){
   currentFunction = new clearCanvas(contextReal, contextDraft)
 })
 
+// Suruchi's Clicks
+$('#straight-line').on('click',function(){
+  currentFunction = new DrawingStraight(contextReal,contextDraft)
+})
 
+$('#curve-line').on('click',function(){
+  currentFunction = new DrawingCurve(contextDraft,contextReal)
+})
