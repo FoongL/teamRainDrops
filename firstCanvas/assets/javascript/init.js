@@ -22,10 +22,6 @@ $('#drawRect').on('click', function() {
 
 
 // David's Clicks
-$('#drawingLine').on('click', function(){
-  currentFunction = new DrawingLine(contextReal,contextDraft)
-})
-
 $('#drawingRect').on('click', function(){
   currentFunction = new DrawingRectangle(contextReal,contextDraft)
 })
@@ -67,3 +63,5 @@ $('#straight-line').on('click',function(){
 $('#curve-line').on('click',function(){
   currentFunction = new DrawingCurve(contextDraft,contextReal)
 })
+
+
