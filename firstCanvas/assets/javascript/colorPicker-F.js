@@ -7,6 +7,7 @@ const colorChange = () => {
     const swatch = document.querySelector('.swatch');
     $('#color').css('background-color', `${getHSL()}`)
     document.getElementById('sat').style.backgroundColor = getHSL();
+    document.getElementById('opa').style.backgroundColor = getHSL();
     lineColor = `${getHSL()}`
 };
 

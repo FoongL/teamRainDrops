@@ -74,14 +74,15 @@ class Graffiti extends PaintFunction {
       let s = hsla[1];
       let l = hsla[2];
       let a = hsla[3];
-      console.log(h)
-      console.log(s)
-      radgrad.addColorStop(0.5, `hsla(${h}, ${s}, ${l}, 0.5)`);
+      a = a.substring(0,a.length -1)
+      let aOne = a*0.5
+      let aTwo = a*0.1
+      radgrad.addColorStop(0.5, `hsla(${h}, ${s}, ${l}, 0.5`);
       radgrad.addColorStop(1, `hsla(${h}, ${s}, ${l}, 0)`);
 
       this.context.fillStyle = radgrad;
       this.context.fillRect(x - 20, y - 20, 40, 40);
-    }
+    } 
     this.lastPoint = currentPoint;
   }
   onMouseMove() {}

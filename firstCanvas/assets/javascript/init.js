@@ -19,3 +19,43 @@ $('#graffiti').on('click', function() {
 $('#drawRect').on('click', function() {
   currentFunction = new DrawingRectangle(contextReal, contextDraft);
 });
+
+
+// David's Clicks
+$('#drawingLine').on('click', function(){
+  currentFunction = new DrawingLine(contextReal,contextDraft)
+})
+
+$('#drawingRect').on('click', function(){
+  currentFunction = new DrawingRectangle(contextReal,contextDraft)
+})
+
+$('#drawingTriangle').on('click', function(){
+  currentFunction = new DrawingTriangle(contextReal, contextDraft)
+})
+
+$('#drawingCircle').on('click', function(){
+  currentFunction = new DrawingCircle(contextReal, contextDraft)
+})
+
+$('#drawingHeart').on('click', function(){
+  currentFunction = new DrawingHeart(contextReal, contextDraft)
+})
+
+$('#drawingPolygon').on('click', function(){
+  currentFunction = new DrawingPolygon(contextReal, contextDraft)
+})
+
+$('#drawingEraser').on('click', function(){
+  currentFunction = new DrawingEraser(contextReal, contextDraft)
+})
+
+
+$('#drawingImages').on('click', function(){
+  $('.imagebox').toggle('show');
+})
+
+$('#clearbutton').click(()=>{
+  deleteBoard('#contextReal');
+  beforeDraw();
+})
