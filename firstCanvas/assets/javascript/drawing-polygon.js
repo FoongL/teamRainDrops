@@ -33,7 +33,7 @@
 //         this.newY = coord[1];       
 //     }
 
-//     drawLine (x1, y1, x2, y2, context) {
+//     newLine (x1, y1, x2, y2, context) {
 //         context.beginPath();
 //         context.moveTo(x1, y1);
 //         context.lineTo(x2, y2);

@@ -55,7 +55,8 @@ $('#drawingImages').on('click', function(){
   $('.imagebox').toggle('show');
 })
 
-$('#clearbutton').click(()=>{
-  deleteBoard('#contextReal');
-  beforeDraw();
+$('#clearCanvas').on('click', function(){
+  currentFunction = new clearCanvas(contextReal, contextDraft)
 })
+
+
