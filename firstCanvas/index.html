@@ -14,8 +14,7 @@
 
 <body>
 
-        <!-- COLOR PICKER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
- <div class='flexbox'>      
+        <!-- COLOR PICKER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->   
         <div class='functionContainer'>
                 <div class="colorpicker" id="colorpicker">
                         <span key="picker" class="picker" id="picker">
@@ -46,7 +45,7 @@
                 </div>
                 <!-- Buttons @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
 
-                <div id='selectionPanel'>
+                <div class='selectionPanel'>
                         <div id='functionPanels'>
                                 <button class="button" id='drawLine'>Pencil</button>
                                 <button class="button" id='graffiti'>Graffiti</button>
@@ -110,7 +109,6 @@
                 <canvas id="canvas-draft" class="canvas"></canvas>
         </div>
         </div>               
-</div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type='text/javascript' src="./assets/javascript/canvasCommon.js"></script>
@@ -127,6 +125,7 @@
         <script type='text/javascript' src="assets/javascript/drawing-curve.js"></script>
         <script type='text/javascript' src="assets/javascript/undoRedo-F.js"></script>
         <script type='text/javascript' src="assets/javascript/selecter-F.js"></script>
+        <script type='text/javascript' src="assets/javascript/drawing-polygon.js"></script>
         <script type='text/javascript'>
                 currentFunction = new PencilLine(contextReal, lineColor);
         </script>

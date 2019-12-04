@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(68, 63, 63);
+}
+
 .colorDescription {
     font-size: 1em;
     /* display: block; */
@@ -19,7 +23,6 @@
 
 #functionPanels {
     display: flex;
-    flex-direction: row;
 }
 
 .colorpicker {
@@ -28,6 +31,7 @@
     font-family: Montserrat, sans-serif;
     position: absolute;
     z-index: 10;
+    top: 200px;
     /* display: block; */
     width: 130px;
     border-radius: 10px;
@@ -59,8 +63,8 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     width: 95%;
-    height: 25px;
-    border: 1px rgb(255, 255, 255) solid;
+    height: 10px;
+    border: 1px white solid;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 .slider-container {
@@ -72,7 +76,7 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     width: 95%;
-    height: 30px;
+    height: 20px;
     border: 2px white solid;
     border-radius: 20px;
 }
@@ -101,7 +105,7 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     appearance: none;
     width: 28px;
    /* Set a specific slider handle width */
-    height: 28px;
+    height: 18px;
    /* Slider handle height */
     border-radius: 30px;
     border: 2px rgb(255, 255, 255) solid;
@@ -137,6 +141,7 @@ input {
     border: 2px white solid;
     border-radius: 20px;
 }
+
 .satcolor {
     background-color: transparent;
 }
@@ -172,9 +177,6 @@ input {
     border-radius: 20px;
 }
 
-.flexbox {
-    display: flex;
-}
 
 .canvas{
     border:1px black solid;
@@ -211,7 +213,6 @@ input {
 /* Mega Box */
 .imagebox {
     display: none;
-    margin-top: 50%;
 }
 
 .imageflex {
