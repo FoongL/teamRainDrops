@@ -22,7 +22,7 @@ $('#selector-button').on('click', function() {
 });
 //------------------Colors
 $('#fill').on('click', function() {
-  currentFunction = new Selecting(contextReal, contextDraft);
+  currentFunction = new ColorFill(contextReal, contextDraft);
 });
 // Other buttons
 $('#drawRect').on('click', function() {
