@@ -21,6 +21,7 @@
             <button class="button" id='drawLine'>Pencil</button>
             <button class="button" id='graffiti'>Graffiti</button>
             <button class="button" id='marker'>Marker</button>
+            <button class="button" id='radialPen'>Radial Pen</button> <!--Suruchi-->
             <button class="button" id='straight-line'>Straight Line</button>
             <button class="button" id='curve-line'>Curved Line</button>
             <button class="button" id="drawingRect">Rekt</button>
@@ -34,6 +35,7 @@
             <button class="button" id="undo-button">Undo</button>
             <button class="button" id="redo-button">Redo</button>
             <button class="button" id="selector-button">Selector</button>
+            <button class="button" id="drawing-text">Text</button>
         </div>
         <div class="colorpicker" id="colorpicker">
             <span key="picker" class="picker" id="picker">
@@ -95,8 +97,22 @@
         </div>
     </div>
 
+    <!--Text Tools-->
+			<div id="textOptions">
+				<div class="textSizeContainer">
+					<div class="showTextSize">17</div>
+					<div class="textSizeSlider"><input type="range" min="8" max="50" value="17" step="1" class="slider" id="textSize"></div>
+				</div>
+				<select id="textFont" name="text Font" onchange="canvasSettings.changeText()">
+					<option> Arial </option>
+					<option> Metrophobic </option>
+					<option> Tahoma </option>
+					<option> Verdana </option>
+				</select>
+				<hr class="mobileHidden">
+			</div>
 
-
+            
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -104,7 +120,7 @@
     <script type='text/javascript' src="./assets/javascript/init.js"></script>
     <script type='text/javascript' src="./assets/javascript/draw-pen-F.js"></script>
     <script type='text/javascript' src="./assets/javascript/colorPicker-F.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-line.js"></script>
+   
     <script type='text/javascript' src="assets/javascript/drawing-rectangle.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-triangle.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-circle.js"></script>
