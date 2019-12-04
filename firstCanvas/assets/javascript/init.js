@@ -53,11 +53,21 @@ $('#drawingEraser').on('click', function(){
   currentFunction = new DrawingEraser(contextReal, contextDraft)
 })
 
+/* Image stamping */
 
 $('#drawingImages').on('click', function(){
   $('.imagebox').toggle('show');
 })
 
+$('#imagebox1').click(function(){
+  currentFunction = new ImageEggplant(contextReal, contextDraft);
+})
+
+$('#imagebox2').click(function(){
+  currentFunction = new ImageClown(contextReal, contextDraft);
+})
+  
+  
 $('#clearCanvas').on('click', function(){
   new clearCanvas(contextReal, contextDraft)
 })
