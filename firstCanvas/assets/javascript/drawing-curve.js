@@ -20,6 +20,11 @@ class DrawingCurve extends PaintFunction{
         this.origX=coord[0];
         this.origY=coord[1];
         console.log(this.origX,this.origY);
+
+        // this.contextReal.beginPath();
+        // this.contextDraft.beginPath();
+
+
         
     }
         // on an even click
@@ -34,8 +39,8 @@ class DrawingCurve extends PaintFunction{
     onDragging(coord,event){
         
         this.contextDraft.strokestyle="blue";
+        this.contextDraft.beginPath()        
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX,this.origY);
         this.contextDraft.lineTo(coord[0], coord[1])
         this.contextDraft.stroke();
@@ -47,23 +52,29 @@ class DrawingCurve extends PaintFunction{
     onMouseUp(coord){
         if ((this.counter%2)==0) {
             this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-            this.contextReal.beginPath();
-            this.contextReal.moveTo(this.origX,this.origY);
-            this.contextReal.quadraticCurveTo(this.cp1,this.cp2, this.origX1,this.origY1);
-            this.contextReal.lineTo(this.origX1,this.origY1);
+            this.contextReal.beginPath(); 
+            this.contextReal.moveTo(this.origX,this.origY); // coordinate 1
+            this.contextReal.quadraticCurveTo(this.cp1,this.cp2, this.origX1,this.origY1); //coordinate 2 from dragging - control point from second mousedown
+            // this.contextReal.lineTo(this.origX1,this.origY1);
             this.contextReal.stroke();
             this.contextReal.closePath();
+            this.counter = 0;
         
         }
-        else {
-        this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.moveTo(this.origX,this.origY);
-        this.contextDraft.lineTo(this.origX1,this.origY1);
-        this.contextDraft.stroke();
-        }
+        // else {
+        // this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+        // this.contextDraft.moveTo(this.origX,this.origY);
+        // this.contextDraft.lineTo(this.origX1,this.origY1);
+        // this.contextDraft.stroke();
+        // }
     }
     
     onMouseMove(){}
-    onMouseLeave(){}
+    onMouseLeave(){
+        // this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+    }
     onMouseEnter(){}
 }
+
+
+//  
