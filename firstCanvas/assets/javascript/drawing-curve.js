@@ -24,7 +24,7 @@ class DrawingCurve extends PaintFunction {
             this.drawCurve([this.origX, this.origY]);
         } else {
             this.drawCurve(coord);
-            this.drawCircle([coord[0], coord[1]], styleGuide)
+            this.drawCircle([coord[0], coord[1]])
         }
     }
 
