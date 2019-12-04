@@ -1,8 +1,3 @@
-#selectionPanel{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-}
 .colorDescription {
     font-size: 1em;
     /* display: block; */
@@ -21,16 +16,20 @@
     user-select: none;
    /* Standard */
 }
+
+#functionPanels {
+    display: flex;
+    flex-direction: row;
+}
+
 .colorpicker {
-    margin-left: 530px;
-    margin-top:15px;
     overflow: hidden;
     overflow-x: hidden;
     font-family: Montserrat, sans-serif;
     position: absolute;
     z-index: 10;
     /* display: block; */
-    width: 250px;
+    width: 130px;
     border-radius: 10px;
     height: auto;
     background-color: hsla(0, 0%, 100%, 1);
@@ -60,9 +59,8 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     width: 95%;
-    height: 30px;
-    border-radius: 20px;
-    border: 2px rgb(255, 255, 255) solid;
+    height: 25px;
+    border: 1px rgb(255, 255, 255) solid;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 .slider-container {
@@ -85,7 +83,7 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     appearance: none;
     width: 100%;
    /* Full-width */
-    height: 30px;
+    height: 15px;
    /* Specified height */
     outline: none;
    /* Remove outline */
@@ -174,30 +172,23 @@ input {
     border-radius: 20px;
 }
 
-#canvasContainer{
-    width:100%;
-    height: 100%;
+.flexbox {
     display: flex;
-    align-content: center;
-    left: 25%
 }
 
 .canvas{
-    border:1px black dotted;
-    position:absolute;
+    border:1px black solid;
+    position: absolute;
     top:0px;
     bottom:0px;
-    left:0px;
-    right:0px
+    left: 335px;
+    right:0px;
 }
 
 #canvas-draft{
     background-color: transparent;
 }
 
-#functions{
-    padding-top: 660px;
-}
 
 /* David's Code */
 /*      *******************************************************************       */
@@ -205,20 +196,22 @@ input {
 /*      *******************************************************************       */
 /* Loader */
 
+
+/* Flexbox */
+
+
 /* Button */
 
 .button {
-    z-index: 3;
-    margin-left: 1000px;
-    margin-top: 10px;
+    z-index: 10;
 }
 
 
 /* Image box */
 /* Mega Box */
 .imagebox {
-    padding-top: 300px;
     display: none;
+    margin-top: 50%;
 }
 
 .imageflex {
@@ -236,4 +229,3 @@ input {
 /* image id */
 #pic1 {
 }
-

@@ -2,131 +2,149 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Canvas First Draft</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Canvas First Draft</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+                crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div class='container-fluid' id='canvasContainer'>
-        <canvas id="canvas-real" class="canvas" width='1000px' height='650px'></canvas>
-        <canvas id="canvas-draft" class="canvas" width='1000px' height='650px'></canvas>
-    </div>
-    <div id=selectionPanel>
-        <div id='functionPanels'>
-            <button class="button" id='drawLine'>Pencil</button>
-            <button class="button" id='graffiti'>Graffiti</button>
-            <button class="button" id='marker'>Marker</button>
-            <button class="button" id='straight-line'>Straight Line</button>
-            <button class="button" id='curve-line'>Curved Line</button>
-            <button class="button" id="drawingRect">Rekt</button>
-            <button class="button" id="drawingTriangle">TriggerDnometry</button>
-            <button class="button" id="drawingCircle">Balls</button>
-            <button class="button" id="drawingHeart">Love</button>
-            <button class="button" id="drawingPolygon">Polygon</button>
-            <button class="button" id="drawingImages">Images</button>
-            <button class="button" id="drawingEraser">Eraser</button>
-            <button class="button" id="clearCanvas">Clear</button>
-<<<<<<< HEAD
-            <button class="button" id="#">Save</button>
-=======
-            <button class="button" id="undo-button">Undo</button>
-            <button class="button" id="redo-button">Redo</button>
-            <button class="button" id="selector-button">Selector</button>
->>>>>>> 87a3e409efda0381d501e10788b98e4c1ebee211
-        </div>
-        <div class="colorpicker" id="colorpicker">
-            <span key="picker" class="picker" id="picker">
-                <h3 class="colorDescription">Color</h3>
-                <div class="swatch" id="color">
+
+        <!-- COLOR PICKER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
+ <div class='flexbox'>      
+        <div class='functionContainer'>
+                <div class="colorpicker" id="colorpicker">
+                        <span key="picker" class="picker" id="picker">
+                                <h3 class="colorDescription">Color</h3>
+                                <div class="swatch" id="color">
+                                </div>
+                                <h6 class="colorDescription">Hue</h6>
+                                <div class="slider-container">
+                                        <input name="hue" type="range" min="1" max="300" value="130"
+                                                class="slider hue" />
+                                </div>
+                                <h6 class="colorDescription">Saturation</h6>
+                                <div class="slider-container">
+                                        <input name="sat" id="sat" type="range" min="1" max="100" value="60"
+                                                class="slider sat" />
+                                </div>
+                                <h6 class="colorDescription">Light</h6>
+                                <div class="slider-container">
+                                        <input name="light" type="range" min="1" max="100" value="55"
+                                                class="slider light" />
+                                </div>
+                                <h6 class="colorDescription">Opacity</h6>
+                                <div class="slider-container">
+                                        <input name="opacity" id="opa" type="range" min="1" max="100" value="100"
+                                                class="slider opacity" />
+                                </div>
+                        </span>
                 </div>
-                <h6 class="colorDescription">Hue</h6>
-                <div class="slider-container">
-                    <input name="hue" type="range" min="1" max="300" value="130" class="slider hue" />
+                <!-- Buttons @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
+
+                <div id='selectionPanel'>
+                        <div id='functionPanels'>
+                                <button class="button" id='drawLine'>Pencil</button>
+                                <button class="button" id='graffiti'>Graffiti</button>
+                                <button class="button" id='marker'>Marker</button>
+                                <button class="button" id='straight-line'>Straight Line</button>
+                                <button class="button" id='curve-line'>Curved Line</button>
+                                <button class="button" id="drawingRect">Rekt</button>
+                                <button class="button" id="drawingTriangle">TriggerDnometry</button>
+                                <button class="button" id="drawingCircle">Balls</button>
+                                <button class="button" id="drawingPolygon">Polygon</button>
+                                <button class="button" id="drawingImages">Images</button>
+                                <button class="button" id="drawingEraser">Eraser</button>
+                                <button class="button" id="clearCanvas">Clear</button>
+                                <button class="button" id="undo-button">Undo</button>
+                                <button class="button" id="redo-button">Redo</button>
+                                <button class="button" id="selector-button">Selector</button>
+                        </div>
                 </div>
-                <h6 class="colorDescription">Saturation</h6>
-                <div class="slider-container">
-                    <input name="sat" id="sat" type="range" min="1" max="100" value="60" class="slider sat" />
-                </div>
-                <h6 class="colorDescription">Light</h6>
-                <div class="slider-container">
-                    <input name="light" type="range" min="1" max="100" value="55" class="slider light" />
-                </div>
-                <h6 class="colorDescription">Opacity</h6>
-                <div class="slider-container">
-                    <input name="opacity" id="opa" type="range" min="1" max="100" value="100" class="slider opacity" />
-                </div>
-            </span>
+                <!-- IMAGE BOX @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+                <div class='imagebox'>
+                        <div class='imageflex'>
+                                <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1"
+                                                src="./assets/images/imageicon/eggplant.png"></div>
+                                <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2"
+                                                src="./assets/images/imageicon/clown.png"></div>
+                                <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3"
+                                                src="./assets/images/imageicon/3.png"></div>
+                                <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4"
+                                                src="./assets/images/imageicon/4.png"></div>
+                                <div class="imagesquare" id='imagebox5'><img class="iconsize" id="pic1"
+                                                src="./assets/images/imageicon/1.png"></div>
+                                <div class="imagesquare" id='imagebox6'><img class="iconsize" id="pic2"
+                                                src="./assets/images/imageicon/2.png"></div>
+                                <div class="imagesquare" id='imagebox7'><img class="iconsize" id="pic3"
+                                                src="./assets/images/imageicon/3.png"></div>
+                                <div class="imagesquare" id='imagebox8'><img class="iconsize" id="pic4"
+                                                src="./assets/images/imageicon/4.png"></div>
+                                <div class="imagesquare" id='imagebox9'><img class="iconsize" id="pic1"
+                                                src="./assets/images/imageicon/1.png"></div>
+                                <div class="imagesquare" id='imagebox10'><img class="iconsize" id="pic2"
+                                                src="./assets/images/imageicon/2.png"></div>
+                                <div class="imagesquare" id='imagebox11'><img class="iconsize" id="pic3"
+                                                src="./assets/images/imageicon/3.png"></div>
+                                <div class="imagesquare" id='imagebox12'><img class="iconsize" id="pic4"
+                                                src="./assets/images/imageicon/4.png"></div>
+                                <div class="imagesquare" id='imagebox13'><img class="iconsize" id="pic1"
+                                                src="./assets/images/imageicon/1.png"></div>
+                                <div class="imagesquare" id='imagebox14'><img class="iconsize" id="pic2"
+                                                src="./assets/images/imageicon/2.png"></div>
+                                <div class="imagesquare" id='imagebox15'><img class="iconsize" id="pic3"
+                                                src="./assets/images/imageicon/3.png"></div>
+                                <div class="imagesquare" id='imagebox16'><img class="iconsize" id="pic1"
+                                                src="./assets/images/imageicon/1.png"></div>
+                        </div>
+                 </div>
+            </div>
+     <!-- Canvas @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+     <div class='canvasContainer'>
+        <div class='container-fluid'>
+                <canvas id="canvas-real" class="canvas"></canvas>
+                <canvas id="canvas-draft" class="canvas"></canvas>
         </div>
-    </div>
+        </div>               
+</div>
 
-    <div class='imagebox'>
-        <div class='imageflex'>
-        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/eggplant.png">
-        </div>
-        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/clown.png">
-        </div>
-        <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
-        </div>
-        <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
-        </div>
-        <div class="imagesquare" id='imagebox5'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
-        </div>
-        <div class="imagesquare" id='imagebox6'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
-        </div>
-        <div class="imagesquare" id='imagebox7'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
-        </div>
-        <div class="imagesquare" id='imagebox8'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
-        </div>
-        <div class="imagesquare" id='imagebox9'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
-        </div>
-        <div class="imagesquare" id='imagebox10'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
-        </div>
-        <div class="imagesquare" id='imagebox11'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
-        </div>
-        <div class="imagesquare" id='imagebox12'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
-        </div>
-        <div class="imagesquare" id='imagebox13'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
-        </div>
-        <div class="imagesquare" id='imagebox14'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
-        </div>
-        <div class="imagesquare" id='imagebox15'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
-        </div>
-        <div class="imagesquare" id='imagebox16'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
-        </div>
-        </div>
-    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type='text/javascript' src="./assets/javascript/canvasCommon.js"></script>
+        <script type='text/javascript' src="./assets/javascript/init.js"></script>
+        <script type='text/javascript' src="./assets/javascript/draw-pen-F.js"></script>
+        <script type='text/javascript' src="./assets/javascript/colorPicker-F.js"></script>
+        <script type='text/javascript' src="assets/javascript/drawing-rectangle.js"></script>
+        <script type='text/javascript' src="assets/javascript/drawing-triangle.js"></script>
+        <script type='text/javascript' src="assets/javascript/drawing-circle.js"></script>
+        <script type='text/javascript' src="assets/javascript/drawing-images.js"></script>
+        <script type='text/javascript' src="assets/javascript/drawing-eraser.js"></script>
+        <script type='text/javascript' src="assets/javascript/clear-canvas.js"></script>
+        <script type='text/javascript' src="assets/javascript/drawing-straight-S.js"></script>
+        <script type='text/javascript' src="assets/javascript/drawing-curve.js"></script>
+        <script type='text/javascript' src="assets/javascript/undoRedo-F.js"></script>
+        <script type='text/javascript' src="assets/javascript/selecter-F.js"></script>
+        <script type='text/javascript'>
+                currentFunction = new PencilLine(contextReal, lineColor);
+        </script>
+        <script type='text/javascript'>
 
+                console.log($(window).height())
+                console.log($(window).width())
 
+                let width = 0.8 * ($(window).width())
+                let height = $(window).height()
 
+                console.log($('#canvas-real'))
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type='text/javascript' src="./assets/javascript/canvasCommon.js"></script>
-    <script type='text/javascript' src="./assets/javascript/init.js"></script>
-    <script type='text/javascript' src="./assets/javascript/draw-pen-F.js"></script>
-    <script type='text/javascript' src="./assets/javascript/colorPicker-F.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-rectangle.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-triangle.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-circle.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-heart.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-polygon.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-images.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-eraser.js"></script>
-    <script type='text/javascript' src="assets/javascript/clear-canvas.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-straight-S.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-curve.js"></script>
-<<<<<<< HEAD
-    <script type='text/javascript' src="assets/javascript/drawing-curve.js"></script>
-=======
-    <script type='text/javascript' src="assets/javascript/undoRedo-F.js"></script>
-    <script type='text/javascript' src="assets/javascript/selecter-F.js"></script>
->>>>>>> 87a3e409efda0381d501e10788b98e4c1ebee211
-    <script type='text/javascript'>
-        currentFunction = new PencilLine(contextReal, lineColor);
-    </script>
+                $('#canvas-real')[0].width = width
+                $('#canvas-draft')[0].width = width
+                $('#canvas-real')[0].height = height
+                $('#canvas-draft')[0].height = height
+        </script>
 </body>
 
 </html>
