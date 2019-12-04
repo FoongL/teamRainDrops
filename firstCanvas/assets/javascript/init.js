@@ -1,3 +1,4 @@
+
 //------------------Pen Function Buttons
 $('#drawLine').on('click', function() {
   currentFunction = new PencilLine(contextReal, lineColor);
@@ -12,7 +13,10 @@ $('#graffiti').on('click', function() {
   $('#liam').on('click', function() {
     currentFunction = new Liam(contextReal, liam);
   });
-
+//------------------Selecter
+$('#selector-button').on('click', function() {
+  currentFunction = new Selecting(contextReal, contextDraft);
+});
 //------------------Colors
 
 // Other buttons

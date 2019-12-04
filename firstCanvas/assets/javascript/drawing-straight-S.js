@@ -5,14 +5,14 @@ class DrawingStraight extends PaintFunction{
         this.contextDraft=contextDraft;
     }
     onMouseDown(coord,event){
-        this.contextReal.strokestyle="#000";
+        this.contextReal.strokeStyle=getHSL();
         this.lineWidth = 5;
         this.origX=coord[0];
         this.origY=coord[1];
         
     }
     onDragging(coord,event){
-        this.contextDraft.strokestyle="blue";
+        this.contextDraft.strokeStyle=getHSL();
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX,this.origY);

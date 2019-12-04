@@ -2,17 +2,18 @@ class DrawingTriangle extends PaintFunction{
     constructor(contextReal,contextDraft){
         super();
         this.contextReal = contextReal;
-        this.contextDraft = contextDraft;            
+        this.contextDraft = contextDraft;           
     }
     
     onMouseDown(coord,event){
-        console.log(coord)
-        this.contextReal.fillStyle = "#f44";
+        this.contextReal.strokeStyle=getHSL();
+        this.contextReal.fillStyle = "transparent";
         this.origX = coord[0];
         this.origY = coord[1];
     }
     onDragging(coord,event){
-        this.contextDraft.fillStyle = "#f44";
+        this.contextDraft.strokeStyle=getHSL();
+        this.contextDraft.fillStyle = "transparent";
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX,this.origY);
