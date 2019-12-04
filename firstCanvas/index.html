@@ -10,8 +10,6 @@
 </head>
 
 <body>
-
-
     <div class='container-fluid' id='canvasContainer'>
         <canvas id="canvas-real" class="canvas" width='1000px' height='650px'></canvas>
         <canvas id="canvas-draft" class="canvas" width='1000px' height='650px'></canvas>
@@ -31,6 +29,7 @@
             <button class="button" id="drawingImages">Images</button>
             <button class="button" id="drawingEraser">Eraser</button>
             <button class="button" id="clearCanvas">Clear</button>
+            <button class="button" id="#">Save</button>
         </div>
         <div class="colorpicker" id="colorpicker">
             <span key="picker" class="picker" id="picker">
@@ -58,37 +57,39 @@
     </div>
 
     <div class='imagebox'>
-        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        <div class='imageflex'>
+        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/eggplant.png">
         </div>
-        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
-        </div>
-        <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
-        </div>
-        <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
-        </div>
-        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
-        </div>
-        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
+        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/clown.png">
         </div>
         <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
         </div>
         <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
         </div>
-        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        <div class="imagesquare" id='imagebox5'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
         </div>
-        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
+        <div class="imagesquare" id='imagebox6'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
         </div>
-        <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
+        <div class="imagesquare" id='imagebox7'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
         </div>
-        <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
+        <div class="imagesquare" id='imagebox8'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
         </div>
-        <div class="imagesquare" id='imagebox1'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        <div class="imagesquare" id='imagebox9'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
         </div>
-        <div class="imagesquare" id='imagebox2'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
+        <div class="imagesquare" id='imagebox10'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
         </div>
-        <div class="imagesquare" id='imagebox3'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
+        <div class="imagesquare" id='imagebox11'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
         </div>
-        <div class="imagesquare" id='imagebox4'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
+        <div class="imagesquare" id='imagebox12'><img class="iconsize" id="pic4" src="./assets/images/imageicon/4.png">
+        </div>
+        <div class="imagesquare" id='imagebox13'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        </div>
+        <div class="imagesquare" id='imagebox14'><img class="iconsize" id="pic2" src="./assets/images/imageicon/2.png">
+        </div>
+        <div class="imagesquare" id='imagebox15'><img class="iconsize" id="pic3" src="./assets/images/imageicon/3.png">
+        </div>
+        <div class="imagesquare" id='imagebox16'><img class="iconsize" id="pic1" src="./assets/images/imageicon/1.png">
+        </div>
         </div>
     </div>
 
@@ -101,7 +102,6 @@
     <script type='text/javascript' src="./assets/javascript/init.js"></script>
     <script type='text/javascript' src="./assets/javascript/draw-pen-F.js"></script>
     <script type='text/javascript' src="./assets/javascript/colorPicker-F.js"></script>
-    <script type='text/javascript' src="assets/javascript/drawing-line.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-rectangle.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-triangle.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-circle.js"></script>
@@ -111,6 +111,7 @@
     <script type='text/javascript' src="assets/javascript/drawing-eraser.js"></script>
     <script type='text/javascript' src="assets/javascript/clear-canvas.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-straight-S.js"></script>
+    <script type='text/javascript' src="assets/javascript/drawing-curve.js"></script>
     <script type='text/javascript' src="assets/javascript/drawing-curve.js"></script>
     <script type='text/javascript'>
         currentFunction = new PencilLine(contextReal, lineColor);
