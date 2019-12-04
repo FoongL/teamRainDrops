@@ -1,80 +1,68 @@
-class DrawingCurve extends PaintFunction{
-    constructor(contextReal,contextDraft){
+class DrawingCurve extends PaintFunction {
+    constructor(contextReal, contextDraft){
         super();
-        this.contextReal = contextReal;
-        this.contextDraft=contextDraft;
-        this.counter= 0;            
+        this.contextReal = contextReal;    
+        this.contextDraft = contextDraft;
+        this.newLine = true;           
     }
-    onMouseDown(coord,event){
-
-        //this will increase the counter
-        this.counter +=1;
-
-        //this gives color to the lines 
-        this.contextReal.strokestyle="#000";
-        this.lineWidth = 5;
-
-        //if it's any odd click
-        if ((this.counter%2)!=0) 
-        {
-        this.origX=coord[0];
-        this.origY=coord[1];
-        console.log(this.origX,this.origY);
-
-        // this.contextReal.beginPath();
-        // this.contextDraft.beginPath();
-
-
-        
+    
+    onMouseDown(coord, event){
+        if (this.newLine == true){
+            this.origX = coord[0];
+            this.origY = coord[1];
+            this.contextReal.beginPath();
+            this.contextReal.moveTo(this.origX,this.origY);
+        } else {
+        }
     }
-        // on an even click
-        else if ((this.counter)%2==0){
-            this.cp1=coord[0]; //capturing the control points
-            this.cp2=coord[1];
-            console.log(this.cp1,this.cp2);
+
+    onDragging(coord,event){
+        if (this.newLine == true){
+            this.endX = coord[0];
+            this.endY = coord[1];
+            this.contextDraft.closePath();
+            this.drawCurve([this.origX, this.origY]);
+        } else {
+            this.drawCurve(coord);
+            this.drawCircle([coord[0], coord[1]])
+        }
+    }
+
+    onMouseUp(coord,event){
+        if (this.newLine == true){
+            this.centerX = (this.origX + this.endX) / 2;
+            this.centerY = (this.origY + this.endY) / 2;
+            this.drawCircle([this.centerX, this.centerY])
+            this.newLine = false;
+        } else {
+            this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+            this.contextReal.quadraticCurveTo(coord[0],coord[1],this.endX,this.endY);
+            this.contextReal.stroke();
+            this.newLine = true;
             
         }
-        
-    }
-    onDragging(coord,event){
-        
-        this.contextDraft.strokestyle="blue";
-        this.contextDraft.beginPath()        
-        this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.moveTo(this.origX,this.origY);
-        this.contextDraft.lineTo(coord[0], coord[1])
-        this.contextDraft.stroke();
-        this.origX1=coord[0];
-        this.origY1=coord[1];
-    
+        beforeDraw();
+
     }
 
-    onMouseUp(coord){
-        if ((this.counter%2)==0) {
-            this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-            this.contextReal.beginPath(); 
-            this.contextReal.moveTo(this.origX,this.origY); // coordinate 1
-            this.contextReal.quadraticCurveTo(this.cp1,this.cp2, this.origX1,this.origY1); //coordinate 2 from dragging - control point from second mousedown
-            // this.contextReal.lineTo(this.origX1,this.origY1);
-            this.contextReal.stroke();
-            this.contextReal.closePath();
-            this.counter = 0;
-        
-        }
-        // else {
-        // this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        // this.contextDraft.moveTo(this.origX,this.origY);
-        // this.contextDraft.lineTo(this.origX1,this.origY1);
-        // this.contextDraft.stroke();
-        // }
-    }
-    
     onMouseMove(){}
     onMouseLeave(){
-        // this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+        this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
     }
     onMouseEnter(){}
+
+    drawCurve(coord) {
+        this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+        this.contextDraft.beginPath();
+        this.contextDraft.moveTo(this.origX,this.origY);
+        this.contextDraft.quadraticCurveTo(coord[0],coord[1],this.endX,this.endY);
+        this.contextDraft.stroke();
+    }
+    drawCircle(coord, styleGuide){
+        this.contextDraft.beginPath();
+        this.contextDraft.arc(coord[0], coord[1], 5, 0, 2 * Math.PI);
+        this.contextDraft.stroke();
+        this.contextDraft.fill();
+    }
 }
 
-
-//  

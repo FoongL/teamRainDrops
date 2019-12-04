@@ -43,10 +43,6 @@ $('#drawingCircle').on('click', function(){
   currentFunction = new DrawingCircle(contextReal, contextDraft)
 })
 
-$('#drawingHeart').on('click', function(){
-  currentFunction = new DrawingHeart(contextReal, contextDraft)
-})
-
 $('#drawingPolygon').on('click', function(){
   currentFunction = new DrawingPolygon(contextReal, contextDraft)
 })

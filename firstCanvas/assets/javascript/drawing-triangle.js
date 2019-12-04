@@ -40,4 +40,4 @@ class DrawingTriangle extends PaintFunction{
     onMouseEnter(){}
 }
 
-//d
+
