@@ -32,10 +32,9 @@ class ColorFill extends PaintFunction {
             this.test = [];
         }
     }
-    onDragging(coord) {     }
+    onDragging(coord) {}
     onMouseMove(coord) { 
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.drawImage(this.paintimg, coord[0] - styleGuide.emojiLength/2, coord[1] - styleGuide.emojiLength/2, styleGuide.emojiLength, styleGuide.emojiLength);
     }
     onMouseUp() { 
         beforeDraw();

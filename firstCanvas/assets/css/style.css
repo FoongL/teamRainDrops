@@ -200,19 +200,40 @@ input {
 }
 
 /* David's Code */
+/*      *******************************************************************       */
+/*      *******************************************************************       */
+/*      *******************************************************************       */
+/* Loader */
+
+/* Button */
+
 .button {
     z-index: 3;
     margin-left: 1000px;
     margin-top: 10px;
 }
 
+
+/* Image box */
+/* Mega Box */
 .imagebox {
+    padding-top: 300px;
     display: none;
 }
 
-.iconsize {
-    width: 25px;
-    height: 25px;
+.imageflex {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
 }
 
+/* image class */
+.iconsize {
+    width: 40px;
+    height: 40px;
+}
+
+/* image id */
+#pic1 {
+}
 
