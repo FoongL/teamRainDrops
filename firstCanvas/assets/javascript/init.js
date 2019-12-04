@@ -21,7 +21,9 @@ $('#selector-button').on('click', function() {
   currentFunction = new Selecting(contextReal, contextDraft);
 });
 //------------------Colors
-
+$('#fill').on('click', function() {
+  currentFunction = new ColorFill(contextReal, contextDraft);
+});
 // Other buttons
 $('#drawRect').on('click', function() {
   currentFunction = new DrawingRectangle(contextReal, contextDraft);

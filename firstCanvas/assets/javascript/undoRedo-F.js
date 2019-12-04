@@ -4,8 +4,6 @@ let redoDataStack = [];
 function beforeDraw() {
   var lastMove = ourCanvas[0].toDataURL();
   undoDataStack.push(lastMove);
-  console.log(undoDataStack)
-
 }
 
 $('#undo-button').click(function undo() {
