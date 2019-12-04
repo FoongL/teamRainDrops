@@ -13,6 +13,9 @@ $('#graffiti').on('click', function() {
   $('#liam').on('click', function() {
     currentFunction = new Liam(contextReal, liam);
   });
+  $('radialPen').on('click',function(){ // Suruchi
+    currentFunction = new RadialPen(contextReal, lineColor);
+  });
 //------------------Selecter
 $('#selector-button').on('click', function() {
   currentFunction = new Selecting(contextReal, contextDraft);
@@ -71,7 +74,7 @@ $('#straight-line').on('click',function(){
 })
 
 $('#curve-line').on('click',function(){
-  currentFunction = new DrawingCurve(contextDraft,contextReal)
+  currentFunction = new DrawingCurve(contextReal,contextDraft)
 })
 
 
