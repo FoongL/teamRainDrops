@@ -1,7 +1,7 @@
 let min = 15;
 let max = 350;
 
-class DrawingPolygon extends PaintFunction{
+class DrawingPolygon extends PaintFunction {
     constructor(contextReal,contextDraft){
         super();
         this.contextReal = contextReal;
