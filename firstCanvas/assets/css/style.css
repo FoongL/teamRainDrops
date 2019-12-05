@@ -173,7 +173,6 @@ input {
 
 
 .canvas{
-    border:1px black solid;
     position: absolute;
     top:0px;
     bottom:0px;
@@ -226,7 +225,7 @@ input {
 
 .canvasContainer {
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 77%;
     background-color: white;
 }
@@ -280,7 +279,7 @@ input {
     position: absolute;
     flex-wrap: wrap;
     width: 280px;
-    left: 50px;
+    left: 3%;
     top: 220px; 
 }
 
