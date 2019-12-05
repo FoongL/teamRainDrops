@@ -32,5 +32,24 @@ class ImageClown extends PaintFunction {
     onMouseUp(){}
 }
 
+class ImageBanana extends PaintFunction {
+    constructor(contextReal) {
+        super();
+        this.contextReal = contextReal;
+        this.contextDraft = contextDraft;  
+    }
+    onMouseDown(coord, event) {
+        let img = new Image();
+        img.src = './assets/images/imageicon/banana.png';
+        img.onload =  () => {
+            this.contextReal.drawImage(img, coord[0], coord[1], 100, 100);
+        }
+    }
+    onDragging(){}
+    onMouseUp(){}
+}
+
+
+
 
 
