@@ -294,6 +294,8 @@ input {
     left: 23.3%;
     top: 12%; 
     z-index: 20;
+    flex-wrap:wrap;
+    height:88%;
 }
 
 /* image class */
