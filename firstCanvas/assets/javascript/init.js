@@ -78,7 +78,3 @@ $('#straight-line').on('click',function(){
 $('#curve-line').on('click',function(){
   currentFunction = new DrawingCurve(contextReal,contextDraft)
 })
-
-$('#radial-pen').on('click',function(){
-  currentFunction= new RadialPen(contextReal,contextDraft)
-})
