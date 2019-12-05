@@ -25,9 +25,9 @@
     font-family: 'Architects Daughter', cursive;
     position: absolute;
     /* display: block; */
-    width: 180px;
-    left: 155px;
-    top: 420px;
+    width: 140px;
+    left: 175px;
+    top: 355px;
     border-radius: 10px;
     height: auto;
     transition: all 0.8s;
@@ -40,7 +40,7 @@
    /* IE10+/Edge */
     user-select: none;
    /* Standard */
-  -webkit-box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 13px 11px 28px 3px rgba(124, 88, 88, 0.24);
 -moz-box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
 box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
 }
@@ -56,8 +56,8 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    width: 95%;
-    height: 10px;
+    width: 60%;
+    height: 35px;
     border: 1px white solid;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
@@ -69,10 +69,10 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    width: 95%;
+    width: 90%;
     height: 20px;
     border: 2px white solid;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .slider {
     -webkit-appearance: none;
@@ -81,7 +81,7 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     appearance: none;
     width: 100%;
    /* Full-width */
-    height: 15px;
+    height: 13px;
    /* Specified height */
     outline: none;
    /* Remove outline */
@@ -99,7 +99,7 @@ box-shadow: 13px 11px 28px 3px rgba(0,0,0,0.24);
     appearance: none;
     width: 28px;
    /* Set a specific slider handle width */
-    height: 18px;
+    height: 13px;
    /* Slider handle height */
     border-radius: 30px;
     border: 2px rgb(255, 255, 255) solid;
@@ -279,9 +279,9 @@ input {
     flex-direction: row;
     position: absolute;
     flex-wrap: wrap;
-    width: 140px;
-    left: 185px;
-    top: 250px; 
+    width: 280px;
+    left: 50px;
+    top: 220px; 
 }
 
 /* image class */
