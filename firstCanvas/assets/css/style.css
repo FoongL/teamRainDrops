@@ -292,7 +292,7 @@ input {
     flex-direction: column;
     position: absolute;
     left: 23.3%;
-    top: 15%; 
+    top: 12%; 
     z-index: 20;
 }
 
@@ -300,5 +300,5 @@ input {
 .iconsize {
     padding-top: 5px;
     width: 40px;
-    height: 40px;
+    height: 45px;
 }

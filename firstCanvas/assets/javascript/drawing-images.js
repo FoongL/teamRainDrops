@@ -125,9 +125,9 @@ class ImageBear extends PaintFunction {
     }
     onMouseDown(coord, event) {
         let img = new Image();
-        img.src = './assets/images/imageicon/bear.png';
+        img.src = './assets/images/imageicon/liam.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0], coord[1], 60, 80);
         }
     }
     onDragging(){}
