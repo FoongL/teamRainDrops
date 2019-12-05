@@ -6,13 +6,18 @@ class DrawingStraight extends PaintFunction{
     }
     onMouseDown(coord,event){
         this.contextReal.strokeStyle=getHSL();
-        this.lineWidth = 5;
+        this.contextReal.lineWidth = getStroke();
+        this.contextReal.lineJoin = 'round';
+        this.contextReal.lineCap = 'round';
         this.origX=coord[0];
         this.origY=coord[1];
         
     }
     onDragging(coord,event){
         this.contextDraft.strokeStyle=getHSL();
+        this.contextDraft.lineWidth = getStroke();
+        this.contextDraft.lineJoin = 'round';
+        this.contextDraft.lineCap = 'round';
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX,this.origY);
