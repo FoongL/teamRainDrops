@@ -40,8 +40,8 @@ class ColorFill extends PaintFunction {
       this.test = [];
     }
   }
-  onDragging(coord, styleGuide) {}
-  onMouseMove(coord) {}
+  onDragging() {}
+  onMouseMove() {}
   onMouseUp() {}
   onMouseLeave() {}
   onMouseEnter() {}
