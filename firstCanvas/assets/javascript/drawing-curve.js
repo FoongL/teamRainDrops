@@ -66,7 +66,7 @@ class DrawingCurve extends PaintFunction {
         this.contextDraft.quadraticCurveTo(coord[0],coord[1],this.endX,this.endY);
         this.contextDraft.stroke();
     }
-    drawCircle(coord, styleGuide){
+    drawCircle(coord){
         this.contextDraft.beginPath();
         this.contextDraft.arc(coord[0], coord[1], 5, 0, 2 * Math.PI);
         this.contextDraft.stroke();

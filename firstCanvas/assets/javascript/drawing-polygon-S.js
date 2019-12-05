@@ -44,7 +44,7 @@ class DrawingPolygon extends PaintFunction {
                 region.lineTo(this.coords[i][0], this.coords[i][1]);
             }
             region.closePath();
-            this.contextReal.fill(region);
+           // this.contextReal.fill(region);
             this.contextReal.stroke(region);
             this.new = true;
             this.coords = [];
@@ -68,7 +68,7 @@ class DrawingPolygon extends PaintFunction {
         this.contextReal.moveTo(this.stepX, this.stepY);
         this.contextReal.lineTo(this.origX, this.origY);
         this.contextReal.stroke();
-        this.contextReal.fillStyle = styleGuide.fillColor;
+        // this.contextReal.fillStyle = styleGuide.fillColor;
         this.contextReal.fill();
         this.coords = [];
         this.new = true;       
