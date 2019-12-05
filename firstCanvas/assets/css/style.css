@@ -18,7 +18,9 @@
    /* Standard */
 }
 
-
+h2{
+    padding-top: 6%;
+}
 .colorpicker {
     overflow: hidden;
     overflow-x: hidden;
