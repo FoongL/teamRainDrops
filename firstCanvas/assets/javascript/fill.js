@@ -145,7 +145,6 @@ class ColorFill extends PaintFunction {
   }
   //fill color
   colorPixel(pixelPos) {
-
     this.imgData.data[pixelPos] = this.rgb[0];
     this.imgData.data[pixelPos + 1] = this.rgb[1];
     this.imgData.data[pixelPos + 2] = this.rgb[2];

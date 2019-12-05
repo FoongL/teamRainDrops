@@ -24,6 +24,8 @@ class Selecting extends PaintFunction {
     if (this.selectionMade == false) {
       this.contextReal.setLineDash([selectorDashLength]);
       this.contextDraft.setLineDash([selectorDashLength]);
+      this.contextReal.strokeStyle = 'black'
+      this.contextDraft.strokeStyle = 'black'
       this.contextReal.lineWidth = this.contextDraft.lineWidth = selectorLineWidth;
       this.origX = coord[0];
       this.origY = coord[1];
@@ -133,6 +135,7 @@ class Selecting extends PaintFunction {
     }
     this.contextReal.setLineDash([]);
     this.contextDraft.setLineDash([]);
+    event.target.style.cursor = 'default';
   }
 
   onMouseMove(coord) {

@@ -8,11 +8,13 @@ class DrawingCircle extends PaintFunction{
     onMouseDown(coord,event){
         this.contextReal.strokeStyle = getHSL();
         this.contextReal.fillStyle = "transparent";
+        this.contextReal.lineWidth=getStroke();
         this.origX = coord[0];
         this.origY = coord[1];
     }
     onDragging(coord,event){
         this.contextDraft.strokeStyle = getHSL();
+        this.contextDraft.lineWidth=getStroke();
         this.contextDraft.fillStyle = "transparent";
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
         this.contextDraft.beginPath();
