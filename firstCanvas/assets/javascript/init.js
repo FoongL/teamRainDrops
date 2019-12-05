@@ -64,7 +64,62 @@ $('#imagebox1').click(function(){
 $('#imagebox2').click(function(){
   currentFunction = new ImageClown(contextReal, contextDraft);
 })
+
+$('#imagebox3').click(function(){
+  currentFunction = new ImageBanana(contextReal, contextDraft);
+})
+
+$('#imagebox4').click(function(){
+  currentFunction = new ImageIcecream(contextReal, contextDraft);
+})
+
+$('#imagebox5').click(function(){
+  currentFunction = new ImageHeart(contextReal, contextDraft);
+})
+
+$('#imagebox6').click(function(){
+  currentFunction = new ImageUnicorn(contextReal, contextDraft);
+})
+
+$('#imagebox7').click(function(){
+  currentFunction = new ImageRaccoon(contextReal, contextDraft);
+})
+
+$('#imagebox8').click(function(){
+  currentFunction = new ImageBear(contextReal, contextDraft);
+})
   
+$('#imagebox9').click(function(){
+  currentFunction = new ImageTomato(contextReal, contextDraft);
+})
+  
+$('#imagebox10').click(function(){
+  currentFunction = new ImageUnderwear(contextReal, contextDraft);
+})
+  
+$('#imagebox11').click(function(){
+  currentFunction = new ImageDog(contextReal, contextDraft);
+})
+
+$('#imagebox12').click(function(){
+  currentFunction = new ImageMonkey(contextReal, contextDraft);
+})
+
+$('#imagebox13').click(function(){
+  currentFunction = new ImageCat(contextReal, contextDraft);
+})
+
+$('#imagebox14').click(function(){
+  currentFunction = new ImageFlower(contextReal, contextDraft);
+})
+
+$('#imagebox15').click(function(){
+  currentFunction = new ImagePoop(contextReal, contextDraft);
+})
+
+$('#imagebox16').click(function(){
+  currentFunction = new ImageMoney(contextReal, contextDraft);
+})
   
 $('#clearCanvas').on('click', function(){
   new clearCanvas(contextReal, contextDraft)
