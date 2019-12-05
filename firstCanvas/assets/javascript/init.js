@@ -13,8 +13,8 @@ $('#graffiti').on('click', function() {
   $('#liam').on('click', function() {
     currentFunction = new Liam(contextReal, liam);
   });
-  $('radialPen').on('click',function(){ // Suruchi
-    currentFunction = new RadialPen(contextReal, lineColor);
+  $('#radialPen').on('click',function(){ // Suruchi
+    currentFunction = new Bubbles(contextReal, lineColor);
   });
 //------------------Selecter
 $('#selector-button').on('click', function() {

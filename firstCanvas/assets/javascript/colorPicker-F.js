@@ -2,6 +2,7 @@ let hue = 130;
 let sat = 60;
 let light = 55;
 let opacity =1;
+let stroke = 3;
 
 const colorChange = () => {
     const swatch = document.querySelector('.swatch');
@@ -14,6 +15,10 @@ const colorChange = () => {
 const getHSL = () => {
     return `hsla(${hue}, ${sat}%, ${light}%, ${opacity})`;
 };
+
+const getStroke =() => {
+    return stroke;
+}
 
 const main = () => {
     const hueInput = document.querySelector('input[name=hue]');
@@ -38,6 +43,11 @@ const main = () => {
         opacity = (opacityInput.value) / 100;
         colorChange();
     });
+    const strokeInput = document.querySelector('input[name=stroke]');
+    strokeInput.addEventListener('input', () => {
+        stroke = (strokeInput.value);
+    });
+    
 
     colorChange();
 };

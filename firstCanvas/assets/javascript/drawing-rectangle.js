@@ -9,14 +9,18 @@ class DrawingRectangle extends PaintFunction {
     console.log(coord);
     this.contextReal.fillStyle = 'transparent';
     this.contextReal.strokeStyle = getHSL();
-    this.contextReal.lineJoin = 'miter';
+    this.contextReal.lineJoin = 'round';
+    this.contextReal.lineCap = 'round';
+    this.contextReal.lineWidth = getStroke();
     this.origX = coord[0];
     this.origY = coord[1];
   }
   onDragging(coord, event) {
     this.contextDraft.strokeStyle = getHSL();
+    this.contextDraft.lineWidth = getStroke();
     this.contextDraft.fillStyle = 'transparent';
-    this.contextDraft.lineJoin = 'miter';
+    this.contextDraft.lineJoin = 'round';
+    this.contextDraft.lineCap = 'round';
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextDraft.fillRect(
       this.origX,

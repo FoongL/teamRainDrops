@@ -45,6 +45,10 @@
           <div class="slider-container">
             <input name="opacity" id="opa" type="range" min="1" max="100" value="100" class="slider opacity" />
           </div>
+          <h6 class="colorDescription">Stroke Width</h6>
+          <div class="slider-container">
+            <input name="stroke" id="stroke" type="range" min="1" max="40" value="2" class="slider opacity" />
+          </div>
         </span>
       </div>
       <!-- Buttons @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
@@ -101,6 +105,11 @@
           <button class="button" id="clearCanvas">
             <img src="assets/images/buttonicon/clear.svg" />
           </button>
+          <a id="download" download="myAwesomeCanvas.png">
+            <button type="button" class="button" onClick="download()">
+              <img src="assets/images/buttonicon/clear.svg" />
+            </button>
+          </a>
         </div>
       </div>
       <!-- IMAGE BOX @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
@@ -198,6 +207,7 @@
   <script type="text/javascript" src="assets/javascript/selecter-F.js"></script>
   <script type="text/javascript" src="assets/javascript/drawing-polygon-S.js"></script>
   <script type="text/javascript" src="assets/javascript/fill.js"></script>
+  <script type="text/javascript" src="assets/javascript/download.js"></script>
   <script type="text/javascript">
     currentFunction = new PencilLine(contextReal, lineColor);
   </script>

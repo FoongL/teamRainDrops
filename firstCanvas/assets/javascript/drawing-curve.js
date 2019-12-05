@@ -10,6 +10,8 @@ class DrawingCurve extends PaintFunction {
         if (this.newLine == true){
             this.origX = coord[0];
             this.origY = coord[1];
+            this.contextReal.strokeStyle = getHSL();
+            this.contextReal.lineWidth=getStroke();
             this.contextReal.beginPath();
             this.contextReal.moveTo(this.origX,this.origY);
         } else {
@@ -21,6 +23,8 @@ class DrawingCurve extends PaintFunction {
             this.endX = coord[0];
             this.endY = coord[1];
             this.contextDraft.closePath();
+            this.contextDraft.strokeStyle = getHSL();
+            this.contextDraft.lineWidth=getStroke();
             this.drawCurve([this.origX, this.origY]);
         } else {
             this.drawCurve(coord);
