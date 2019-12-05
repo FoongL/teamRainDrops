@@ -45,7 +45,7 @@ $('#drawingCircle').on('click', function(){
 
 $('#drawingPolygon').on('click', function(){
   currentFunction = new DrawingPolygon(contextReal, contextDraft)
-})
+});
 
 $('#drawingEraser').on('click', function(){
   currentFunction = new DrawingEraser(contextReal, contextDraft)
@@ -78,5 +78,3 @@ $('#straight-line').on('click',function(){
 $('#curve-line').on('click',function(){
   currentFunction = new DrawingCurve(contextReal,contextDraft)
 })
-
-
