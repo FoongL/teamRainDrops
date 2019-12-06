@@ -205,6 +205,8 @@ input {
 .intro h1 {
   position: absolute;
   top: 0px;
+  color: rgb(229, 253, 251);
+  text-shadow: -3px 0 rgb(37, 37, 37), 0 1px rgb(63, 63, 63), 1px 0 rgb(34, 33, 33), 0 -1px black;
   width: 22%;
   text-align: center;
   font-family: 'Kaushan Script', cursive;
@@ -218,22 +220,27 @@ input {
   top: 9%;
   left: 1%;
   text-align: left;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .intro h2 {
   position: absolute;
-  font-size: 15px;
-  width: 20%;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 30px;
+  width: 18%;
   top: 17%;
   left: 1%;
   text-align: center;
   padding-top: 5%;
+  color: rgb(0, 0, 0);
 }
 .intro h3 {
   position: absolute;
-  font-size: 13px;
-  width: 20%;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  width: 18%;
   top: 19%;
   padding-top: 6.5%;
   left: 1%;
@@ -251,8 +258,9 @@ input {
   flex-direction: column;
   height: 100vh;
   width: 23%;
-  background-color: rgb(250, 183, 183);
+  background-image: linear-gradient(45deg, rgb(253, 192, 192), rgb(250, 182, 182));
 }
+
 
 .canvasContainer {
   display: flex;
@@ -290,11 +298,25 @@ input {
   background-color: rgb(247, 233, 241);
 }
 
+.button:hover,
+.button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  background: rgb(186, 238, 255);
+  border: rgb(0, 153, 255) 2px solid;
+}
+
 .buttonStroke {
   width: 65px;
   height: 65px;
   border-radius: 5px;
   background-color: rgb(247, 233, 241);
+}
+
+.buttonStroke:hover,
+.buttonStroke:focus {
+  background: pink;
+  border: black 2px solid;
 }
 
 /* Image box */
