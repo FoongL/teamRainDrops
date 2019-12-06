@@ -8,7 +8,7 @@ class ImageEggplant extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/eggplant.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -25,7 +25,7 @@ class ImageClown extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/clown.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -42,7 +42,7 @@ class ImageBanana extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/banana.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -59,7 +59,7 @@ class ImageIcecream extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/icecream.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -76,7 +76,7 @@ class ImageHeart extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/heart.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -93,7 +93,7 @@ class ImageUnicorn extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/unicorn.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -110,7 +110,7 @@ class ImageRaccoon extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/raccoon.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -127,7 +127,7 @@ class ImageBear extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/liam.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 60, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 60, 80);
         }
     }
     onDragging(){}
@@ -144,7 +144,7 @@ class ImageTomato extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/tomato.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -161,7 +161,7 @@ class ImageUnderwear extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/underwear.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -178,7 +178,7 @@ class ImageDog extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/dog.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -195,7 +195,7 @@ class ImageMonkey extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/monkey.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -213,7 +213,7 @@ class ImageCat extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/cat.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -230,7 +230,7 @@ class ImageFlower extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/flower.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -247,7 +247,7 @@ class ImagePoop extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/poop.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
@@ -264,7 +264,7 @@ class ImageMoney extends PaintFunction {
         let img = new Image();
         img.src = './assets/images/imageicon/money.png';
         img.onload =  () => {
-            this.contextReal.drawImage(img, coord[0], coord[1], 80, 80);
+            this.contextReal.drawImage(img, coord[0]-30, coord[1]-40, 80, 80);
         }
     }
     onDragging(){}
