@@ -49,12 +49,6 @@ $('#drawingCircle').on('click', function(){
   currentFunction = new DrawingCircle(contextReal, contextDraft)
 })
 
-$('#drawingPolygon').on('click', function(){
-  $('#funcDesc').html('PPOOLLYYGGOOONNN!!!');
-  $("#details").html(`YEEEEEEEAAAAAA BABYYYYYY`);
-  currentFunction = new DrawingPolygon(contextReal, contextDraft)
-});
-
 $('#drawingEraser').on('click', function(){
   $('#funcDesc').html('Eraser');
   $("#details").html(`Only losers make mistakes`);
@@ -116,10 +110,9 @@ $('#imagebox8').click(function(){
   $("#details").html(`'Oh no.'`);
   currentFunction = new ImageBear(contextReal, contextDraft);
 })
-  
 $('#imagebox9').click(function(){
-  $('#funcDesc').html('Apple');
-  $("#details").html(`Draws a tomato`);
+  $('#funcDesc').html('Tomato');
+  $("#details").html(`Butt Emoji`);
   currentFunction = new ImageTomato(contextReal, contextDraft);
 })
   
@@ -170,6 +163,13 @@ $('#clearCanvas').on('click', function(){
   $("#details").html(`Only failures make big mistakes`);
   new clearCanvas(contextReal, contextDraft)
 })
+
+$('#drawingPolygon').on('click', function(){
+  $('#funcDesc').html('PPOOLLYYGGOOONNN!!!');
+  $("#details").html(`YEEEEEEEAAAAAA BABYYYYYY`);
+  currentFunction = new DrawingPolygon(contextReal, contextDraft)
+});
+
 
 // Suruchi's Clicks
 $('#straight-line').on('click',function(){
