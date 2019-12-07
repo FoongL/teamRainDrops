@@ -22,12 +22,7 @@ class DrawingRectangle extends PaintFunction {
     this.contextDraft.lineJoin = 'round';
     this.contextDraft.lineCap = 'round';
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-    this.contextDraft.fillRect(
-      this.origX,
-      this.origY,
-      coord[0] - this.origX,
-      coord[1] - this.origY
-    );
+    this.contextDraft.fillRect(this.origX,this.origY,coord[0] - this.origX,coord[1] - this.origY);
     this.contextDraft.beginPath();
     this.contextDraft.moveTo(this.origX, this.origY);
     this.contextDraft.lineTo(coord[0], this.origY);
@@ -36,10 +31,10 @@ class DrawingRectangle extends PaintFunction {
     this.contextDraft.moveTo(this.origX, this.origY);
     this.contextDraft.lineTo(this.origX, coord[1]);
     this.contextDraft.stroke();
-    this.contextDraft.beginPath();
-    this.contextDraft.moveTo(this.origX, this.origY);
-    this.contextDraft.lineTo(this.origX, coord[1]);
-    this.contextDraft.stroke();
+    // this.contextDraft.beginPath();
+    // this.contextDraft.moveTo(this.origX, this.origY);
+    // this.contextDraft.lineTo(this.origX, coord[1]);
+    // this.contextDraft.stroke();
     this.contextDraft.beginPath();
     this.contextDraft.moveTo(coord[0], coord[1]);
     this.contextDraft.lineTo(this.origX, coord[1]);
@@ -67,10 +62,10 @@ class DrawingRectangle extends PaintFunction {
     this.contextReal.moveTo(this.origX, this.origY);
     this.contextReal.lineTo(this.origX, coord[1]);
     this.contextReal.stroke();
-    this.contextReal.beginPath();
-    this.contextReal.moveTo(this.origX, this.origY);
-    this.contextReal.lineTo(this.origX, coord[1]);
-    this.contextReal.stroke();
+    // this.contextReal.beginPath();
+    // this.contextReal.moveTo(this.origX, this.origY);
+    // this.contextReal.lineTo(this.origX, coord[1]);
+    // this.contextReal.stroke();
     this.contextReal.beginPath();
     this.contextReal.moveTo(coord[0], coord[1]);
     this.contextReal.lineTo(this.origX, coord[1]);

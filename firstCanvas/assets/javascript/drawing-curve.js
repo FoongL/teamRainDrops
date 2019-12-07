@@ -49,7 +49,7 @@ class DrawingCurve extends PaintFunction {
             this.newLine = true;
             
         }
-        beforeDraw();
+       
 
     }
 
