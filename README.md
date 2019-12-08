@@ -21,4 +21,3 @@ To create a painting utility using HTML, CSS and Javascript.
     11.Pen width.
     12.Select and cut
     13.Download and save as a png file.
-    
