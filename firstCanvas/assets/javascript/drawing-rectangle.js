@@ -22,7 +22,12 @@ class DrawingRectangle extends PaintFunction {
     this.contextDraft.lineJoin = 'round';
     this.contextDraft.lineCap = 'round';
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-    this.contextDraft.fillRect(this.origX,this.origY,coord[0] - this.origX,coord[1] - this.origY);
+    this.contextDraft.fillRect(
+      this.origX,
+      this.origY,
+      coord[0] - this.origX,
+      coord[1] - this.origY
+    );
     this.contextDraft.beginPath();
     this.contextDraft.moveTo(this.origX, this.origY);
     this.contextDraft.lineTo(coord[0], this.origY);

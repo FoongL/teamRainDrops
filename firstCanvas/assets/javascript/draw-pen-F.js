@@ -75,15 +75,15 @@ class Graffiti extends PaintFunction {
       let s = hsla[1];
       let l = hsla[2];
       let a = hsla[3];
-      a = a.substring(0,a.length -1)
-      let aOne = a*0.5
-      let aTwo = a*0.1
+      a = a.substring(0, a.length - 1);
+      let aOne = a * 0.5;
+      let aTwo = a * 0.1;
       radgrad.addColorStop(0.5, `hsla(${h}, ${s}, ${l}, 0.5`);
       radgrad.addColorStop(1, `hsla(${h}, ${s}, ${l}, 0)`);
 
       this.context.fillStyle = radgrad;
       this.context.fillRect(x - 20, y - 20, 40, 40);
-    } 
+    }
     this.lastPoint = currentPoint;
   }
   onMouseMove() {}
@@ -107,7 +107,6 @@ class Marker extends PaintFunction {
     this.context.lineWidth = getStroke();
     this.context.lineJoin = 'round';
     this.context.lineCrap = 'round';
-
   }
 
   onMouseDown(coord, event) {
@@ -126,13 +125,25 @@ class Marker extends PaintFunction {
     this.context.lineWidth = getStroke();
 
     this.context.globalAlpha = 1;
-    this.context.moveTo(this.lastPoint.x - 4*(this.context.lineWidth * 0.5), this.lastPoint.y - 4*(this.context.lineWidth * 0.5));
-    this.context.lineTo(coord[0] - 4*(this.context.lineWidth * 0.5), coord[1] - 4*(this.context.lineWidth * 0.5));
+    this.context.moveTo(
+      this.lastPoint.x - 4 * (this.context.lineWidth * 0.5),
+      this.lastPoint.y - 4 * (this.context.lineWidth * 0.5)
+    );
+    this.context.lineTo(
+      coord[0] - 4 * (this.context.lineWidth * 0.5),
+      coord[1] - 4 * (this.context.lineWidth * 0.5)
+    );
     this.context.stroke();
 
     this.context.globalAlpha = 0.6;
-    this.context.moveTo(this.lastPoint.x - 2*(this.context.lineWidth * 0.5), this.lastPoint.y - 2*(this.context.lineWidth * 0.5));
-    this.context.lineTo(coord[0] - 2*(this.context.lineWidth * 0.5), coord[1] - 2*(this.context.lineWidth * 0.5));
+    this.context.moveTo(
+      this.lastPoint.x - 2 * (this.context.lineWidth * 0.5),
+      this.lastPoint.y - 2 * (this.context.lineWidth * 0.5)
+    );
+    this.context.lineTo(
+      coord[0] - 2 * (this.context.lineWidth * 0.5),
+      coord[1] - 2 * (this.context.lineWidth * 0.5)
+    );
     this.context.stroke();
 
     this.context.globalAlpha = 0.4;
@@ -141,22 +152,34 @@ class Marker extends PaintFunction {
     this.context.stroke();
 
     this.context.globalAlpha = 0.3;
-    this.context.moveTo(this.lastPoint.x + 2*(this.context.lineWidth * 0.5), this.lastPoint.y + 2*(this.context.lineWidth * 0.5));
-    this.context.lineTo(coord[0] + 2*(this.context.lineWidth * 0.5), coord[1] + 2*(this.context.lineWidth * 0.5));
+    this.context.moveTo(
+      this.lastPoint.x + 2 * (this.context.lineWidth * 0.5),
+      this.lastPoint.y + 2 * (this.context.lineWidth * 0.5)
+    );
+    this.context.lineTo(
+      coord[0] + 2 * (this.context.lineWidth * 0.5),
+      coord[1] + 2 * (this.context.lineWidth * 0.5)
+    );
     this.context.stroke();
 
     this.context.globalAlpha = 0.2;
-    this.context.moveTo(this.lastPoint.x + 4*(this.context.lineWidth * 0.5), this.lastPoint.y + 4*(this.context.lineWidth * 0.5));
-    this.context.lineTo(coord[0] + 4*(this.context.lineWidth * 0.5), coord[1] + 4*(this.context.lineWidth * 0.5));
+    this.context.moveTo(
+      this.lastPoint.x + 4 * (this.context.lineWidth * 0.5),
+      this.lastPoint.y + 4 * (this.context.lineWidth * 0.5)
+    );
+    this.context.lineTo(
+      coord[0] + 4 * (this.context.lineWidth * 0.5),
+      coord[1] + 4 * (this.context.lineWidth * 0.5)
+    );
     this.context.stroke();
 
     this.lastPoint = { x: coord[0], y: coord[1] };
-    this.context.globalAlpha = 1
+    this.context.globalAlpha = 1;
   }
 
   onMouseMove() {}
   onMouseUp() {
-    this.context.globalAlpha = 1
+    this.context.globalAlpha = 1;
   }
   onMouseLeave() {}
   onMouseEnter() {}
@@ -217,4 +240,3 @@ class Liam extends PaintFunction {
     this.context.stroke();
   }
 }
-

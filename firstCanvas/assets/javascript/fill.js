@@ -73,7 +73,6 @@ class ColorFill extends PaintFunction {
     var newPos, x, y, pixelPos, reachLeft, reachRight;
     //add task to pixel stack
     this.pixelStack.push(coord);
-    //   console.log(pixelStack)
     while (this.pixelStack.length) {
       //set new locaiton from pixel stack
       newPos = this.pixelStack.pop();
@@ -98,29 +97,20 @@ class ColorFill extends PaintFunction {
 
       //go down as long as the color matches in inside the canvas
       while (y <= canvasReal.height - 1 && this.matchStartColor(pixelPos)) {
-        //fill current pixel location
         this.colorPixel(pixelPos);
-        //downward
         y += 1;
 
-        //check left pixel
         if (x > 0) {
-          //match start color return true
           if (this.matchStartColor(pixelPos - 4)) {
-            //if not yet reach left edge
             if (!reachLeft) {
-              //add pixel to stack to handle it later
               this.pixelStack.push([x - 1, y]);
-              //prevent adding pixel that will eventually handled by the downward march of the pixel we just add
               reachLeft = true;
             }
           } else if (reachLeft) {
-            //color not match then change reach Left to false, for adding next pixel stack
             reachLeft = false;
           }
         }
 
-        // check right pixel
         if (x < canvasReal.width - 1) {
           if (this.matchStartColor(pixelPos + 4)) {
             if (!reachRight) {
@@ -131,12 +121,10 @@ class ColorFill extends PaintFunction {
             reachRight = false;
           }
         }
-        //should be last valid pixel location
         pixelPos += canvasReal.width * 4;
       }
     }
   }
-  //check new color equal to start color
   matchStartColor(pixelPos) {
     var re = this.imgData.data[pixelPos];
     var gr = this.imgData.data[pixelPos + 1];

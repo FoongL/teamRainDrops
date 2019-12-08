@@ -24,8 +24,8 @@ class Selecting extends PaintFunction {
     if (this.selectionMade == false) {
       this.contextReal.setLineDash([selectorDashLength]);
       this.contextDraft.setLineDash([selectorDashLength]);
-      this.contextReal.strokeStyle = 'black'
-      this.contextDraft.strokeStyle = 'black'
+      this.contextReal.strokeStyle = 'black';
+      this.contextDraft.strokeStyle = 'black';
       this.contextReal.lineWidth = this.contextDraft.lineWidth = selectorLineWidth;
       this.origX = coord[0];
       this.origY = coord[1];
@@ -131,7 +131,6 @@ class Selecting extends PaintFunction {
       this.origY = coord[1] - this.obj.height / 2;
       this.objX = coord[0] + this.obj.width / 2;
       this.objY = coord[1] + this.obj.height / 2;
-    
     }
     this.contextReal.setLineDash([]);
     this.contextDraft.setLineDash([]);
@@ -221,20 +220,14 @@ class Selecting extends PaintFunction {
 
   adjustPoints() {
     if (this.objX < this.origX && this.objY > this.origY) {
-      //drag from right top
-
       this.origX -= this.obj.width;
       this.objX += this.obj.width;
     } else if (this.objX < this.origX && this.objY < this.origY) {
-      //drag from right bottom
-
       this.origX -= this.obj.width;
       this.origY -= this.obj.height;
       this.objX += this.obj.width;
       this.objY += this.obj.height;
     } else if (this.objX > this.origX && this.objY < this.origY) {
-      //drag from left bottom
-
       this.origY -= this.obj.height;
       this.objY += this.obj.height;
     }

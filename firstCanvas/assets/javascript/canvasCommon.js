@@ -1,4 +1,3 @@
-
 let canvasReal = document.getElementById('canvas-real');
 let contextReal = canvasReal.getContext('2d');
 let canvasDraft = document.getElementById('canvas-draft');
@@ -9,54 +8,53 @@ let fillColor = 'rgba(0,0,0,1)';
 let dragging = false;
 let undoDataStack = [];
 
-
-$( document ).ready(function() {
-    contextReal.fillStyle = 'rgba(255, 255, 255,1)';  
-    contextReal.fillRect(0,0,canvasReal.width,canvasReal.height);
+$(document).ready(function() {
+  contextReal.fillStyle = 'rgba(255, 255, 255,1)';
+  contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
 });
 
-$('#canvas-draft').mousedown(function(e){
-    let mouseX = e.offsetX;
-    let mouseY = e.offsetY;
-    currentFunction.onMouseDown([mouseX,mouseY],e);
-    dragging = true;
+$('#canvas-draft').mousedown(function(e) {
+  let mouseX = e.offsetX;
+  let mouseY = e.offsetY;
+  currentFunction.onMouseDown([mouseX, mouseY], e);
+  dragging = true;
 });
 
-$('#canvas-draft').mousemove(function(e){
-    let mouseX = e.offsetX;
-    let mouseY = e.offsetY;
-    if(dragging){
-        currentFunction.onDragging([mouseX,mouseY],e);
-    }
-    currentFunction.onMouseMove([mouseX,mouseY],e);
+$('#canvas-draft').mousemove(function(e) {
+  let mouseX = e.offsetX;
+  let mouseY = e.offsetY;
+  if (dragging) {
+    currentFunction.onDragging([mouseX, mouseY], e);
+  }
+  currentFunction.onMouseMove([mouseX, mouseY], e);
 });
 
-$('#canvas-draft').mouseup(function(e){
-    dragging = false;
-    let mouseX = e.offsetX;
-    let mouseY = e.offsetY;
-    currentFunction.onMouseUp([mouseX,mouseY],e);
-    beforeDraw()
+$('#canvas-draft').mouseup(function(e) {
+  dragging = false;
+  let mouseX = e.offsetX;
+  let mouseY = e.offsetY;
+  currentFunction.onMouseUp([mouseX, mouseY], e);
+  beforeDraw();
 });
-$('#canvas-draft').mouseleave(function(e){
-    dragging = false;
-    let mouseX = e.offsetX;
-    let mouseY = e.offsetY;
-    currentFunction.onMouseLeave([mouseX,mouseY],e);
-});
-
-$('#canvas-draft').mouseenter(function(e){
-    let mouseX = e.offsetX;
-    let mouseY = e.offsetY;
-    currentFunction.onMouseEnter([mouseX,mouseY],e);
+$('#canvas-draft').mouseleave(function(e) {
+  dragging = false;
+  let mouseX = e.offsetX;
+  let mouseY = e.offsetY;
+  currentFunction.onMouseLeave([mouseX, mouseY], e);
 });
 
-class PaintFunction{
-    constructor(){}
-    onMouseDown(){}
-    onDragging(){}
-    onMouseMove(){}
-    onMouseUp(){}
-    onMouseLeave(){}
-    onMouseEnter(){}
-}    
+$('#canvas-draft').mouseenter(function(e) {
+  let mouseX = e.offsetX;
+  let mouseY = e.offsetY;
+  currentFunction.onMouseEnter([mouseX, mouseY], e);
+});
+
+class PaintFunction {
+  constructor() {}
+  onMouseDown() {}
+  onDragging() {}
+  onMouseMove() {}
+  onMouseUp() {}
+  onMouseLeave() {}
+  onMouseEnter() {}
+}
