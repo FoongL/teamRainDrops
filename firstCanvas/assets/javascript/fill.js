@@ -19,9 +19,6 @@ class ColorFill extends PaintFunction {
     let s = Number(hsl[1].split('%')[0])/ 100;
     let l = Number(hsl[2].split('%')[0])/ 100;
     this.rgb = this.hslToRgb(h, s, l);
-    console.log(hsl)
-    console.log(h,s,l)
-    console.log(this.rgb)
     this.contextReal.fillStyle = getHSL();
     this.imgData = this.contextReal.getImageData(
       0,

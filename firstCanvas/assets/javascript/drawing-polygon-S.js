@@ -11,7 +11,10 @@ class DrawingPolygon extends PaintFunction {
   }
 
   onMouseDown(coord, event) {
+    this.contextReal.strokeStyle = getHSL();
     this.contextReal.lineWidth = getStroke();
+    this.contextReal.lineJoin = 'round';
+    this.contextReal.lineCap = 'round';
     if (this.new) {
       this.coords = [];
       this.origX = this.stepX = coord[0];
@@ -40,7 +43,6 @@ class DrawingPolygon extends PaintFunction {
   }
 
   onMouseUp(coord, event) {
-    this.contextReal.lineWidth = getStroke();
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.drawLine(this.stepX, this.stepY, coord[0], coord[1], this.contextReal);
     this.coords.push(coord);
@@ -52,8 +54,7 @@ class DrawingPolygon extends PaintFunction {
     if (
       (Math.abs(this.stepX - this.origX) < min &&
         Math.abs(this.stepY - this.origY) < min &&
-        this.new == false) ||
-      event.timeStamp - this.doubleClickTimeCheck < max
+        this.new == false) 
     ) {
       let region = new Path2D();
       region.moveTo(this.origX, this.origY);
@@ -66,7 +67,7 @@ class DrawingPolygon extends PaintFunction {
       this.coords = [];
     } else this.new = false;
 
-    this.doubleClickTimeCheck = event.timeStamp;
+
   }
 
   drawLine(x1, y1, x2, y2, context) {
